@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "https://imdbapi-production.up.railway.app/"}); //creates base connection with API
+const API = axios.create({ baseURL: process.env.REACT_APP_URL}); //creates base connection with API
+
 API.interceptors.request.use((req) => {
 
   return req;
